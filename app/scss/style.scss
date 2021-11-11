@@ -1,8 +1,5 @@
 @import 'func';
 
-
-
-// FONTS>>>>>>>>>>>>>>>>>>>
 @font-face {
     font-family: 'NotoSans';
     src: url(../fonts/NotoSans-Regular.ttf);
@@ -13,13 +10,13 @@
     src: url(../fonts/BBCReithSansCd_A_Rg.ttf);
 }
 
-// VAR>>>>>>>>>>>
+//*<<<<<<<<<<<<<<<<<<VAR>>>>>>>>>>>>>>>>>>>>>>>>>>
 
-// FONTS
+//*<<<<<<<<<<<<<<<<<<<FONTS>>>>>>>>>>>>>>>>>>>>>>>
 $NotoSans: 'NotoSans';
 $BBC: 'BBCReith';
 
-// COLOR
+//*<<<<<<<<<<<<<<<<<<COLOR>>>>>>>>>>>>>>>>>>>>>>>>
 $HeadFont: #1652AC;
 $TextFont: #45494F;
 $Font: #464C53;
@@ -28,9 +25,8 @@ $whiteFontBTN: #FAFBFE;
 $FooterTitleFont: #A3ADBA;
 $FooterTextFont: #9EABBB;
 
-
-// GENERAL>>>>>>>>>>>>>>>>>
-// TEXT STYLES
+//*<<<<<<<<<<<<<<<<<<<<GENERAL>>>>>>>>>>>>>>>>>>>>
+//*TEXT STYLES
 .h2 {
     font-family: $BBC;
     @include font (20, 40, 700);
@@ -39,7 +35,6 @@ $FooterTextFont: #9EABBB;
     color: $HeadFont;
     margin-bottom: 20px;
 }
-
 .text {
     font-family: $NotoSans;
     @include font (17, 32, 400);
@@ -48,7 +43,6 @@ $FooterTextFont: #9EABBB;
         font-weight: 700;
     }
 }
-
 .h3 {
     font-family: $BBC;
     text-transform: uppercase;
@@ -56,7 +50,6 @@ $FooterTextFont: #9EABBB;
     letter-spacing: 5px;
     text-align: center;
 }
-
 .btn_blue {
     background: linear-gradient(180deg, #0C5CD6 0%, rgba(0, 56, 140, 0) 100%), #004FC7;
     border: 1px solid #FFFFFF;
@@ -64,10 +57,8 @@ $FooterTextFont: #9EABBB;
     border-radius: 12px;
     font-family: $BBC;
 }
-
 .carousel {
     border-radius: 16px;
-
     &-control-prev,
     &-control-next {
         position: inherit;
@@ -78,26 +69,21 @@ $FooterTextFont: #9EABBB;
         box-shadow: 0px 0px 21px rgba(64, 68, 75, 0.14);
         border-radius: 8px;
     }
-
     &-control-prev-icon,
     &-control-next-icon {
         background-image: url(../images/slide-arrow.svg);
     }
-
     &-control-next-icon {
         transform: rotate(180deg);
     }
-
     &-indicators {
         position: inherit;
         width: 90px;
         height: 70px;
     }
-
     &-buttons {
         margin-top: 30px;
     }
-
     &-indicators [data-bs-target] {
         width: 12px;
         height: 12px;
@@ -107,17 +93,14 @@ $FooterTextFont: #9EABBB;
         border: 1px solid #0045AC;
         box-sizing: border-box;
     }
-
     &-indicators,
     .active {
         opacity: 1;
     }
 }
-
 img {
     width: 100%;
 }
-
 .benefits,
 .char,
 .gallery,
@@ -125,12 +108,10 @@ img {
     background: #FBFBFC;
 }
 
-//<<<<<<<<<<<<<<<<ALL>>>>>>>>>>>>>>>>>>
-
+//*<<<<<<<<<<<<<<<<ALL>>>>>>>>>>>>>>>>>>
 body {
     position: relative;
 }
-// ПРОБА
 .header {
     &__menu{
         top: 42px;
@@ -181,9 +162,6 @@ body {
         color: #2E75FF;
     }
 }
-
-
-
 .main {
     display: grid;
     grid-template-columns: 40% 50%;
@@ -205,7 +183,6 @@ body {
             border-bottom: 7px solid #EDEFF3;
         }
     }
-
     &__text {
         position: relative;
         margin-top: 55px;
@@ -230,7 +207,6 @@ body {
         grid-row-end: 3;
     }
 }
-
 .banner {
     background: linear-gradient(180deg, #163DA2 0%, #003584 100%);
     color: $WhiteFont;
@@ -371,10 +347,7 @@ body {
     }
 }
 
-
-
-
-
+//*<<<<<<<<<<<<<<<<MEDIA>>>>>>>>>>>>>>>>>> 
 
 @media screen and (max-width: 1199px) {
     .main {
