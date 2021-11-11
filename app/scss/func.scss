@@ -1,0 +1,79 @@
+@mixin font($size, $height, $weight) {
+	font-size: $size+px;
+	line-height: $height+px;
+	font-weight: $weight;
+}
+
+
+// MEDIA query
+@mixin vw-font($size, $height, $weight) {
+	font-size: vw($size);
+	line-height: vw($height);
+	font-weight: $weight;
+}
+
+@mixin xd-vw-font($size, $height, $weight) {
+	font-size: xd-vw($size);
+	line-height: xd-vw($height);
+	font-weight: $weight;
+}
+
+@mixin transition($duration) {
+	-webkit-transition: all $duration;
+	-moz-transition: all $duration;
+	transition: all $duration;
+}
+
+@mixin transform($percentage) {
+	-webkit-transform: translateY($percentage);
+	-moz-transform: translateY($percentage);
+	-ms-transform: translateY($percentage);
+	-o-transform: translateY($percentage);
+	transform: translateY($percentage);
+}
+
+@mixin strWidth ($maxWidth) {
+	max-width: $maxWidth+px;
+	width: 100%;
+}
+
+@mixin strHeight ($maxHeight) {
+	max-height: $maxHeight+px;
+	height: 100%;
+}
+
+/// Remove the unit of a length
+/// @param {Number} $number - Number to remove unit from
+/// @return {Number} - Unitless number
+@function strip-unit($number) {
+	@if type-of($number)=='number'and not unitless($number) {
+		@return $number / ($number * 0 + 1);
+	}
+
+	@return $number;
+}
+
+// 1200 //
+@function xl-vw($px) {
+	@return unquote(strip-unit($px)/1200*100+"vw");
+}
+
+// 992 //
+@function lg-vw($px) {
+	@return unquote(strip-unit($px)/992*100+"vw");
+}
+
+// 768 //
+@function md-vw($px) {
+	@return unquote(strip-unit($px)/768*100+"vw");
+}
+
+// 576 //
+@function sm-vw($px) {
+	@return unquote(strip-unit($px)/576*100+"vw");
+}
+
+// 375 //
+@function xsm-vw($px) {
+	@return unquote(strip-unit($px)/375*100+"vw");
+}
